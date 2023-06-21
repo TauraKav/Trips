@@ -1,0 +1,7 @@
+.tripWrapper{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+}
