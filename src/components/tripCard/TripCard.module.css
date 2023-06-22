@@ -2,7 +2,7 @@
     background-color: rgb(178, 198, 212);
     width: 400px;
     min-height: 400px;
-    padding: 15px;
+    padding: 20px;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
@@ -33,4 +33,14 @@
 .link{
     text-decoration: none;
     color: rgb(14, 15, 15);
+}
+
+.textWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date, .duration, .price {
+    font-size: 17px;
 }

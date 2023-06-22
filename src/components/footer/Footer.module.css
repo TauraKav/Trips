@@ -1,0 +1,19 @@
+.footerWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    height: 80px;
+    width: 100%;
+    background-color: rgb(226, 243, 105);
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+    }
+      
+    .logoImg{
+        align-self: center;
+        height: 70px;
+        width: 120px; 
+        object-fit: cover;
+        }

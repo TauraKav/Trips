@@ -1,5 +1,5 @@
 .image {
- height: 250px;
+ height: 400px;
  width: 100%;
     object-fit: cover;
 }
@@ -13,28 +13,51 @@
     margin-left: 100px;
     margin-right: 100px;
     padding: 30px;
+    background-color: rgb(246, 232, 213);
+    width: 60%;
+    margin:auto;
+    
+}
+
+.tripsWrapper {
+    min-height: calc(100vh - 280px);
 }
 
 .imgWrapper {
-    width: 50%;
+    width: 60%;
+}
+
+.imgWrapper h1 {
+    margin:0px;
+}
+
+.imgWrapper h3 {
+    margin-top:8px;
+    margin-bottom: 25px;
 }
 
 .text {
-    width: 50%;
+    width: 40%;
     align-self: center;
     font-size: 20px;
 }
 
+.text div {
+    margin:15px 0px 15px 0px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
 .orderButton {
-   padding-left: 15px;
-   padding-right: 15px;
+   padding-left: 25px;
+   padding-right: 25px;
    padding-top: 7px;
    padding-bottom: 7px;
    background-color: rgb(143, 202, 217);
    border: solid, 2px, black;
    border-radius: 7px;
    font-size: 14px;
-   font-weight: 500;
+   font-weight: 600;
    cursor: pointer;
 }
 

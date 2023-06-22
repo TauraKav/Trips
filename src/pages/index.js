@@ -3,28 +3,33 @@ import axios from "axios";
 import TripCard from "../components/tripCard/TripCard";
 import styles from "./styles.module.css";
 import Navbar from "../components/navbar/Navbar";
-
+import Footer from "../components/footer/Footer";
 
 const TripsPage = ({ journeys }) => {
   const [trips, setTrips] = useState (journeys);
 
   return (
     <> 
-    <div>
+    <Navbar/>
+    
+    <div className={styles.tripsWrapper}>
       <div className={styles.tripWrapper}>
       {trips && trips.map((trip) => (
           <div key={trips.id}>
           <TripCard
             id={trip.id}
-            destination={trip.destination}
+            country={trip.country}
             imageUrl={trip.image_url}
             date ={trip.date}
             duration ={trip.duration}
+           price ={trip.price}
           />
           </div>
         ))}
         </div>
 </div>
+
+<Footer/>
 </>
     
   )
