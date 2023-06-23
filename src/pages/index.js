@@ -22,8 +22,7 @@ const TripsPage = ({ journeys }) => {
             imageUrl={trip.image_url}
             date ={trip.date}
             duration ={trip.duration}
-           price ={trip.price}
-          />
+           price ={trip.price}/>
           </div>
         ))}
         </div>

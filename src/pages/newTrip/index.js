@@ -15,19 +15,33 @@ const NewTripPage = () => {
     const [date, setDate] = useState("");
     const [country, setCountry] = useState("");
     const [image_url, setImageUrl] = useState("");
+    const [isSuccess, setSuccess] = useState(false);
 
     const addNewTrip = async () => {
-      const response = await axios.post("https://649316f4428c3d2035d15013.mockapi.io/journeys", {
-       destination: destination,
-        duration: duration,
-        price: price,
-        date: date,
-       country: country,
-       image_url: image_url,
-      });
-  
-      console.log("response", response);
-      router.push("/");
+      try {
+        const response = await axios.post("https://649316f4428c3d2035d15013.mockapi.io/journeys", {
+          destination: destination,
+           duration: duration,
+           price: price,
+           date: date,
+          country: country,
+          image_url: image_url,
+         });
+
+         console.log (response)
+
+         if (response.status === 201) {
+          setSuccess(true);
+        
+          setTimeout(() => {
+            router.push("/");
+          }, 3000);
+        }
+
+      } catch (err) {
+        console.log(err);
+      }
+      
     };
   
     return (
@@ -71,7 +85,9 @@ const NewTripPage = () => {
             placeholder="Image Url"
           />
 
-          <button onClick={() => addNewTrip()}>Add a new trip</button>
+          <button onClick={addNewTrip}>Add a new trip</button>
+
+          {isSuccess && <div>Trip was added successfully</div>}
         </div>
 
         <Footer/>

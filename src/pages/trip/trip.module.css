@@ -1,11 +1,10 @@
 .image {
- height: 400px;
- width: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
 .wrapper {
-   display: flex;
+    display: flex;
     gap: 50px;
     margin-top: 50px;
     border: solid 2px black;
@@ -15,8 +14,8 @@
     padding: 30px;
     background-color: rgb(246, 232, 213);
     width: 60%;
-    margin:auto;
-    
+    margin: auto;
+
 }
 
 .tripsWrapper {
@@ -28,11 +27,11 @@
 }
 
 .imgWrapper h1 {
-    margin:0px;
+    margin: 0px;
 }
 
 .imgWrapper h3 {
-    margin-top:8px;
+    margin-top: 8px;
     margin-bottom: 25px;
 }
 
@@ -43,25 +42,66 @@
 }
 
 .text div {
-    margin:15px 0px 15px 0px;
+    margin: 15px 0px 15px 0px;
     font-size: 22px;
     font-weight: 600;
 }
 
 .orderButton {
-   padding-left: 25px;
-   padding-right: 25px;
-   padding-top: 7px;
-   padding-bottom: 7px;
-   background-color: rgb(143, 202, 217);
-   border: solid, 2px, black;
-   border-radius: 7px;
-   font-size: 14px;
-   font-weight: 600;
-   cursor: pointer;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: rgb(143, 202, 217);
+    border: solid, 2px, black;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .orderButton:hover {
     background-color: rgb(190, 216, 216);
 }
 
+.bookingButton {
+    color: rgb(27, 159, 60);
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 950px) {
+    .text div {
+        font-size: 16px;
+    }
+
+    .imgWrapper h1 {
+        font-size: 22px;
+    }
+
+    .imgWrapper h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 720px) {
+    .wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .imgWrapper {
+        width: 100%;
+    }
+
+    .text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .imgWrapper h1,
+    .imgWrapper h3 {
+        text-align: center;
+    }
+}

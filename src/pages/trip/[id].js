@@ -7,20 +7,23 @@ import { useRouter } from "next/router";
 
 const trip = () => {
     const [trip, setTrip] = useState();
+    const [booking, setBooking] = useState('');
+
 
     const router = useRouter();
 
     const fetchEvent = async () => {
-        console.log(router.query.id);
-        console.log(router);
-        const response = await axios.get(
-            `https://649316f4428c3d2035d15013.mockapi.io/journeys/${router.query.id}`,
-            { userId: "1" }
-        );
+        try {
+            const response = await axios.get(
+                `https://649316f4428c3d2035d15013.mockapi.io/journeys/${router.query.id}`,
+                { userId: "1" }
+            );
 
-        const { data } = response;
-        setTrip(data);
-
+            const { data } = response;
+            setTrip(data);
+        } catch (err) {
+            console.log(err);
+        }
     };
 
     useEffect(() => {
@@ -28,6 +31,14 @@ const trip = () => {
             fetchEvent();
     }, [router.query.id]
     )
+
+    const bookTrip = () => {
+       
+        setBooking ( "Thank you, come again")
+        setTimeout(() => {
+            router.push("/");
+          }, 3000);
+        }
 
     return (
         <>
@@ -46,12 +57,15 @@ const trip = () => {
                                 <div>{trip.date}</div>
                                 <div>Trip duration -  {trip.duration} days</div>
                                 <div> Price: {trip.price} € </div>
-                                <button className={styles.orderButton}>Book</button>
+                                <button onClick= {bookTrip} className={styles.orderButton}>Book</button>
                             </div>
                         </>
                     )}
                 </div>
-                </div>
+                <div className={styles.bookingButton}>{booking}</div>
+            </div>
+
+            
             <Footer />
         </>
     )

@@ -44,3 +44,24 @@
 .date, .duration, .price {
     font-size: 17px;
 }
+
+
+@media (max-width: 720px) {
+    .card {
+        width: 300px;
+        min-height: 300px; 
+    }
+
+    .destination {
+        font-size: 20px;
+    }
+    .image {
+        height: 200px;
+    }
+
+    .date, .duration, .price {
+        font-size: 15px;
+    }
+
+
+}
