@@ -35,7 +35,7 @@ const NewTripPage = () => {
         
           setTimeout(() => {
             router.push("/");
-          }, 3000);
+          }, 2000);
         }
 
       } catch (err) {
